@@ -17,7 +17,7 @@
                    id="alerta">
                   <div class="alert alert-success text-center">
                       <strong id="resultado">
-                          Olá Maravilhoso Mundo Bootstrap
+                          Boa noite, Meu concasagrado
                       </strong>
                   </div>
                   
