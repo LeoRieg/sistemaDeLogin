@@ -82,7 +82,7 @@ if(isset($_SESSION['nomeUsuario']))
                       <div class="form-group">
                           <input type="submit" name="btnEntrar"
                                  id="btnEntrar" 
-                                 value=":: Entrar ::"
+                                 value="Entrar"
                                  class="btn btn-primary btn-block">
                       </div>
                       
@@ -168,7 +168,7 @@ if(isset($_SESSION['nomeUsuario']))
                           <input type="submit" 
                                  name="btnRegistroUsuario"
                                  id="btnRegistroUsuario"
-                                 value=":: Registrar ::"
+                                 value="Registrar"
                                  class="btn btn-primary btn-block">
                       </div>
                       
@@ -209,7 +209,7 @@ if(isset($_SESSION['nomeUsuario']))
                       <div class="form-group">
                           <input type="submit" name="btnGerar"
                                  id="btnGerar" 
-                                 value=":: Gerar ::"
+                                 value="Gerar"
                                  class="btn btn-primary btn-block">
                       </div>
                       <div class="form-group float-right">
