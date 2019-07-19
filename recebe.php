@@ -33,11 +33,11 @@ if(isset($_POST['action'])
         $_SESSION['nomeUsuario'] = $nomeUsuário;
         echo 'ok';
         
-        if(!empty($_POST['checkLembrar'])){
+        if(!empty($_POST['lembrar'])){
             setcookie("nomeUsuario",$nomeUsuário,
                     time()+(365*24*60*60));
             //1 ano de vida em segundos
-            setcookie('senhaUsuario',$senha,
+            setcookie('senhaUsuario',$senhaUsuário,
                     time()+(365*24*60*60));
         }else{
             //Limpa o cookie
