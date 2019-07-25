@@ -20,7 +20,8 @@ if(isset($_SESSION['nomeUsuario']))
     <style>
         #alerta,
         #caixaRegistro,
-        #caixaSenha{
+        #caixaSenha,
+        #espera{
             display: none;
         }  
     </style>
@@ -38,12 +39,15 @@ if(isset($_SESSION['nomeUsuario']))
                   </div>
               </div>
           </section>
-          <div class="col-lg-4 offset-lg-4 text-center mb-4">
-          <div class="spinner-border text-primary" role="status">
           
-            <span class="sr-only">Esperando...</span>
+          <!--SPINNER de Espera--> 
+          <div class="col-lg-4 offset-lg-4 text-center mb-4">
+            <div class="spinner-border text-primary" 
+                 role="status" id="espera">
+                <span class="sr-only">Esperando...</span>
+            </div>
           </div>
-          </div>
+          
           <!-- Formulário de Login -->
           <section class="row">
               <div class="col-lg-4 offset-lg-4 bg-light rounded"
@@ -59,7 +63,10 @@ if(isset($_SESSION['nomeUsuario']))
                                  class="form-control"
                                  placeholder="Nome do usuário"
                                  required minlength="5"
-                                 value="<?= isset($_COOKIE['nomeUsuario'])?$_COOKIE['nomeUsuario']:"";?>">
+                                 value="<?= 
+                                    isset($_COOKIE['nomeUsuario'])?
+                                        $_COOKIE['nomeUsuario']
+                                        :"" ?>">
                       </div>
                       
                       <div class="form-group">
@@ -68,7 +75,10 @@ if(isset($_SESSION['nomeUsuario']))
                                  class="form-control"
                                  placeholder="Senha"
                                  required minlength="6"
-                                 value="<?= isset($_COOKIE['senhaUsuario'])?$_COOKIE['senhaUsuario']:"";?>">
+                                 value="<?=
+                                     isset($_COOKIE['senhaUsuario'])?
+                                           $_COOKIE['senhaUsuario']
+                                           :"" ?>">
                       </div>
                       
                       <div class="form-group mt-5">
@@ -76,10 +86,12 @@ if(isset($_SESSION['nomeUsuario']))
                               <input type="checkbox" name="lembrar"
                                      id="checkLembrar" 
                                      class="custom-control-input" 
-                                     
-                                     <?= isset($_COOKIE['senhaUsuario'])?'checked':'';?>>
-                                     
-                                     <label for="checkLembrar" 
+                                     <?= 
+                                      isset($_COOKIE['senhaUsuario'])?  
+                                     'checked'
+                                     :'' ?>>
+                              
+                              <label for="checkLembrar" 
                                      class="custom-control-label">
                                   Lembrar de mim.
                               </label>
@@ -92,7 +104,7 @@ if(isset($_SESSION['nomeUsuario']))
                       <div class="form-group">
                           <input type="submit" name="btnEntrar"
                                  id="btnEntrar" 
-                                 value="Entrar"
+                                 value=":: Entrar ::"
                                  class="btn btn-primary btn-block">
                       </div>
                       
@@ -178,7 +190,7 @@ if(isset($_SESSION['nomeUsuario']))
                           <input type="submit" 
                                  name="btnRegistroUsuario"
                                  id="btnRegistroUsuario"
-                                 value="Registrar"
+                                 value=":: Registrar ::"
                                  class="btn btn-primary btn-block">
                       </div>
                       
@@ -219,7 +231,7 @@ if(isset($_SESSION['nomeUsuario']))
                       <div class="form-group">
                           <input type="submit" name="btnGerar"
                                  id="btnGerar" 
-                                 value="Gerar"
+                                 value=":: Gerar ::"
                                  class="btn btn-primary btn-block">
                       </div>
                       <div class="form-group float-right">
